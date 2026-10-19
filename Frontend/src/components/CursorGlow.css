@@ -1,0 +1,36 @@
+
+.cursor-glow {
+  position: fixed;
+  left: -200px;
+  top: -200px;
+
+  width: 220px;
+  height: 220px;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+
+  z-index: 99999;
+  opacity: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 190, 91, 0.32) 0%,
+    rgba(255, 151, 54, 0.18) 28%,
+    rgba(255, 130, 40, 0.07) 52%,
+    transparent 72%
+  );
+
+  filter: blur(10px);
+  mix-blend-mode: screen;
+
+  transition: opacity 150ms ease;
+  will-change: left, top;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
+}
