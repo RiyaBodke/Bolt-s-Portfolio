@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import TopBar from "./Topbar";
 import StickyNote from "./StickyNote";
 import VisitorCounter from "./VisitorCounter";
 import "./EntryPage.css";
@@ -34,8 +33,6 @@ export default function EntryPage({ onEnter }) {
             draggable="false"
           />
         </picture>
-
-        <TopBar />
 
         <div className="star-layer" aria-hidden="true">
           {stars.map((star) => (

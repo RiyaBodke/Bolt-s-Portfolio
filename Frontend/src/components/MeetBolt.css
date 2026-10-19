@@ -1,0 +1,1210 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito:wght@400;500;600;700;800;900&family=Rye&display=swap");
+
+:root {
+  --bolt-ink: #25170f;
+  --bolt-paper: #f8dfb0;
+  --bolt-paper-light: #ffedc9;
+  --bolt-red: #c72b35;
+  --bolt-red-dark: #851b20;
+  --bolt-shadow: rgba(31, 15, 6, 0.48);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.meet-bolt-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--bolt-ink);
+  background: #1d100a;
+  font-family: "Nunito", system-ui, sans-serif;
+}
+
+.meet-bolt-artboard {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 1920px);
+  aspect-ratio: 3 / 2;
+  margin-inline: auto;
+  overflow: hidden;
+  background: #4a2815;
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.3);
+  container-type: inline-size;
+}
+
+.meet-bolt-background-wrap,
+.meet-bolt-background {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.meet-bolt-background {
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.meet-bolt-artboard::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(22, 10, 4, 0.06), transparent 22%, transparent 70%, rgba(22, 10, 4, 0.18)),
+    radial-gradient(ellipse at 50% 42%, transparent 30%, rgba(18, 8, 2, 0.16) 100%);
+}
+
+.meet-bolt-artboard button,
+.meet-bolt-artboard input {
+  font: inherit;
+}
+
+.meet-bolt-artboard button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.meet-bolt-artboard button:focus-visible,
+.meet-bolt-modal button:focus-visible,
+.meet-bolt-activities input:focus-visible {
+  outline: 3px solid #fff2b8;
+  outline-offset: 3px;
+}
+
+.meet-bolt-topbar {
+  position: absolute;
+  z-index: 8;
+  inset: 0 0 auto;
+  height: 4.1%;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 1.2%;
+  padding: 0 2.1%;
+  border-bottom: 2px solid rgba(98, 54, 26, 0.7);
+  background-color: #f8e6c5;
+  background-image:
+    linear-gradient(rgba(138, 91, 52, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138, 91, 52, 0.12) 1px, transparent 1px);
+  background-size: 12px 12px;
+  box-shadow: 0 2px 8px rgba(25, 10, 3, 0.35);
+  font-family: "DM Mono", monospace;
+}
+
+.meet-bolt-brand,
+.meet-bolt-topnav button {
+  border: 0;
+  padding: 0;
+  color: var(--bolt-ink);
+  background: transparent;
+  cursor: pointer;
+  font-size: clamp(7px, 0.95cqw, 16px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.meet-bolt-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75cqw;
+  height: 100%;
+  min-width: 19%;
+  text-align: left;
+}
+
+.meet-bolt-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.9cqw;
+  min-width: 21px;
+  height: 78%;
+  border: 1px solid #72251f;
+  border-radius: 3px;
+  color: #fff1ce;
+  background: #b52b35;
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(10px, 1.2cqw, 20px);
+  box-shadow: inset 0 0 0 2px rgba(255, 222, 168, 0.45);
+}
+
+.meet-bolt-topnav {
+  display: flex;
+  align-items: center;
+  gap: 0.9cqw;
+  min-width: 0;
+}
+
+.meet-bolt-topnav button {
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.meet-bolt-topnav button:hover {
+  color: var(--bolt-red);
+  transform: translateY(-1px);
+}
+
+.meet-bolt-topnav i {
+  color: var(--bolt-red);
+  font-size: clamp(7px, 0.8cqw, 13px);
+  font-style: normal;
+}
+
+.meet-bolt-window-controls {
+  display: flex;
+  gap: 0.28cqw;
+  margin-left: auto;
+}
+
+.meet-bolt-window-controls span {
+  display: grid;
+  place-items: center;
+  width: 1.75cqw;
+  height: 1.75cqw;
+  min-width: 14px;
+  min-height: 14px;
+  border: 2px solid #26180f;
+  color: #1e120c;
+  font-family: Arial, sans-serif;
+  font-size: clamp(10px, 1.3cqw, 20px);
+  line-height: 1;
+}
+
+.meet-bolt-mobile-hero { display: contents; }
+
+.meet-bolt-sidebar {
+  position: absolute;
+  z-index: 7;
+  top: 10.2%;
+  bottom: 25%;
+  left: 1.4%;
+  width: 8.9%;
+  min-width: 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6%;
+  padding: 0.55%;
+  border: 2px solid #8a512b;
+  border-radius: 5px;
+  background:
+    linear-gradient(90deg, rgba(255, 222, 165, 0.06), transparent 20%, rgba(0, 0, 0, 0.12)),
+    repeating-linear-gradient(0deg, rgba(46, 20, 8, 0.08) 0 2px, transparent 2px 23px),
+    #492817;
+  box-shadow: 4px 7px 13px var(--bolt-shadow), inset 0 0 0 2px rgba(239, 183, 102, 0.12);
+}
+
+.meet-bolt-side-link {
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25cqw;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.1cqw;
+  color: #ffe5b4;
+  background: transparent;
+  cursor: pointer;
+  text-shadow: 0 1px 2px #170a03;
+  transition: background 160ms ease, transform 160ms ease, border-color 160ms ease;
+}
+
+.meet-bolt-side-link span {
+  font-size: clamp(11px, 1.7cqw, 27px);
+  line-height: 1;
+}
+
+.meet-bolt-side-link b {
+  font-size: clamp(6px, 0.86cqw, 14px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.meet-bolt-side-link:hover,
+.meet-bolt-side-link.is-active {
+  border-color: #f4c27d;
+  color: #2d170c;
+  background: #f5d49c;
+  text-shadow: none;
+  transform: translateX(2px);
+}
+
+.meet-bolt-sound {
+  position: absolute;
+  z-index: 9;
+  top: 5.7%;
+  right: 1.5%;
+  display: flex;
+  align-items: center;
+  gap: 0.65cqw;
+  padding: 0.45cqw 0.7cqw;
+  border: 2px solid #53311b;
+  border-radius: 5px;
+  color: #24160d;
+  background: #f9e4bb;
+  box-shadow: 3px 4px 0 rgba(43, 20, 8, 0.42);
+  font-size: clamp(8px, 1cqw, 16px);
+}
+
+.meet-bolt-sound > span:first-child {
+  color: #b62431;
+  font-size: clamp(12px, 1.7cqw, 26px);
+}
+
+.meet-bolt-toggle {
+  width: 3.2cqw;
+  min-width: 27px;
+  height: 1.6cqw;
+  min-height: 14px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #7e1e22;
+  border-radius: 99px;
+  padding: 2px;
+  background: #a9a08d;
+  cursor: pointer;
+  transition: background 180ms ease;
+}
+
+.meet-bolt-toggle span {
+  width: 1.15cqw;
+  min-width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff8e8;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: transform 180ms ease;
+}
+
+.meet-bolt-toggle.is-on {
+  background: #c52d3a;
+}
+
+.meet-bolt-toggle.is-on span {
+  transform: translateX(1.45cqw);
+}
+
+.meet-bolt-title-card {
+  position: absolute;
+  z-index: 4;
+  top: 7.8%;
+  left: 12.5%;
+  width: 31.5%;
+  min-height: 16%;
+  padding: 1.2% 1.6% 1%;
+  border: 2px solid #72421e;
+  border-radius: 5px 9px 5px 8px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(145, 77, 33, 0.12) 0 1px, transparent 2px),
+    repeating-linear-gradient(0deg, rgba(128, 80, 39, 0.055) 0 1px, transparent 1px 7px),
+    #f7dba9;
+  box-shadow: 6px 8px 0 rgba(35, 16, 5, 0.38), inset 0 0 0 3px rgba(255, 240, 204, 0.55);
+  transform: rotate(-3.3deg);
+}
+
+.meet-bolt-title-card::before,
+.meet-bolt-title-card::after {
+  position: absolute;
+  top: -5%;
+  width: 1.2%;
+  height: 13%;
+  border: 2px solid #5a371d;
+  border-radius: 50%;
+  background: #c28a4d;
+  content: "";
+}
+
+.meet-bolt-title-card::before { left: 14%; }
+.meet-bolt-title-card::after { right: 11%; }
+
+.meet-bolt-eyebrow {
+  display: block;
+  margin-bottom: 0.15em;
+  font-family: "DM Mono", monospace;
+  font-size: clamp(6px, 0.66cqw, 11px);
+  letter-spacing: 0.08em;
+}
+
+.meet-bolt-title-card h1 {
+  margin: 0;
+  color: #21190f;
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(24px, 5.1cqw, 78px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-shadow: 1px 2px 0 rgba(122, 70, 31, 0.18);
+}
+
+.meet-bolt-title-card h1 em {
+  color: #a61e26;
+  font-style: normal;
+}
+
+.meet-bolt-title-card p {
+  margin: 0.55em 0 0;
+  font-size: clamp(7px, 1.02cqw, 16px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.meet-bolt-title-card p span {
+  color: var(--bolt-red);
+  font-size: 1.5em;
+}
+
+.meet-bolt-note {
+  position: absolute;
+  z-index: 4;
+  padding: 1.2% 1.3%;
+  border: 1px solid #b7834c;
+  color: #382316;
+  background:
+    repeating-linear-gradient(0deg, rgba(123, 72, 34, 0.055) 0 1px, transparent 1px 8px),
+    #f8dfb1;
+  box-shadow: 4px 5px 0 rgba(34, 16, 6, 0.36);
+  font-size: clamp(8px, 1.15cqw, 18px);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.meet-bolt-note p { margin: 0; }
+.meet-bolt-note span,
+.meet-bolt-note b { color: var(--bolt-red); }
+
+.meet-bolt-note-left {
+  top: 27%;
+  left: 13.5%;
+  width: 13.7%;
+  transform: rotate(-7deg);
+}
+
+.meet-bolt-note-left b {
+  display: block;
+  margin-top: 0.25em;
+  text-align: right;
+}
+
+.meet-bolt-note-middle {
+  top: 31%;
+  left: 31.5%;
+  width: 10.4%;
+  transform: rotate(-7deg);
+}
+
+.meet-bolt-note-right {
+  top: 19.5%;
+  left: 54%;
+  width: 11.8%;
+  transform: rotate(4deg);
+}
+
+.meet-bolt-character {
+  position: absolute;
+  z-index: 5;
+  top: 29%;
+  left: 39.3%;
+  width: 23%;
+  height: 34%;
+  display: grid;
+  place-items: center;
+  transform-origin: 50% 82%;
+}
+
+.meet-bolt-character-button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.meet-bolt-character-image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 7px 5px rgba(26, 12, 4, 0.4));
+  transform-origin: 50% 78%;
+  animation: meet-bolt-idle 4.2s ease-in-out infinite;
+  transition: filter 180ms ease;
+}
+
+.meet-bolt-character-button:hover .meet-bolt-character-image {
+  filter: drop-shadow(0 0 12px rgba(255, 196, 90, 0.7)) drop-shadow(0 7px 5px rgba(26, 12, 4, 0.4));
+}
+
+.meet-bolt-character-halo {
+  position: absolute;
+  z-index: 1;
+  left: 16%;
+  right: 16%;
+  bottom: 4%;
+  height: 18%;
+  border-radius: 50%;
+  background: rgba(255, 164, 50, 0.23);
+  filter: blur(14px);
+  animation: meet-bolt-halo 3s ease-in-out infinite;
+}
+
+.meet-bolt-character.is-waving .meet-bolt-character-image {
+  animation: meet-bolt-wave 0.42s ease-in-out 4;
+}
+
+.meet-bolt-greeting {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: -1%;
+  width: max-content;
+  max-width: 140%;
+  padding: 0.55em 0.9em;
+  border: 1px solid #875323;
+  border-radius: 6px;
+  color: #342014;
+  background: #ffedc8;
+  box-shadow: 2px 3px 0 rgba(28, 12, 3, 0.3);
+  font-size: clamp(7px, 0.85cqw, 14px);
+  font-weight: 900;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 6px) rotate(-2deg);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.meet-bolt-greeting.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0) rotate(-2deg);
+}
+
+.meet-bolt-story-button {
+  position: absolute;
+  z-index: 6;
+  top: 24.7%;
+  left: 69.5%;
+  width: 21.2%;
+  height: 30.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  overflow: hidden;
+  border: 0.7cqw solid #312018;
+  border-radius: 5.2% / 4%;
+  padding: 0;
+  color: #fff1d0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 194, 83, 0.3), transparent 26%),
+    linear-gradient(145deg, rgba(19, 21, 26, 0.93), rgba(50, 26, 14, 0.95)),
+    #2d2119;
+  box-shadow: 0 0 0 3px #a66b35, 6px 8px 0 rgba(22, 9, 2, 0.45), inset 0 0 0 2px rgba(255, 208, 132, 0.25);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.meet-bolt-story-button::before {
+  position: absolute;
+  inset: 4%;
+  border: 1px solid rgba(255, 206, 126, 0.45);
+  border-radius: 4%;
+  content: "";
+  pointer-events: none;
+}
+
+.meet-bolt-story-button:hover {
+  transform: translateY(-3px) rotate(-0.4deg);
+  box-shadow: 0 0 0 3px #d69b51, 7px 12px 0 rgba(22, 9, 2, 0.45), 0 0 24px rgba(255, 174, 68, 0.3);
+}
+
+.meet-bolt-story-preview {
+  position: absolute;
+  inset: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 22%, #ffc768 0 1px, transparent 2px),
+    radial-gradient(circle at 76% 28%, #ffdb86 0 2px, transparent 3px),
+    radial-gradient(circle at 64% 73%, #ffbd5a 0 1px, transparent 2px),
+    linear-gradient(160deg, #23303b, #5c351f 55%, #161b20);
+}
+
+.meet-bolt-preview-stars {
+  color: #ffc66e;
+  font-size: clamp(10px, 2cqw, 32px);
+  letter-spacing: 0.7em;
+  animation: meet-bolt-twinkle 2.2s ease-in-out infinite;
+}
+
+.meet-bolt-preview-bot {
+  display: grid;
+  place-items: center;
+  width: 30%;
+  aspect-ratio: 1;
+  border: 3px solid #e8b76e;
+  border-radius: 28%;
+  color: #ffd18a;
+  background: #633b25;
+  box-shadow: 0 0 22px rgba(255, 173, 70, 0.45);
+  font-size: clamp(22px, 4.4cqw, 68px);
+}
+
+.meet-bolt-story-button strong {
+  position: relative;
+  z-index: 2;
+  margin-top: 4%;
+  font-size: clamp(10px, 1.65cqw, 26px);
+  line-height: 1.12;
+  text-align: center;
+  text-shadow: 0 2px 3px #1c0e05;
+}
+
+.meet-bolt-play {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 2.9cqw;
+  min-width: 23px;
+  aspect-ratio: 1;
+  margin-top: 1%;
+  border-radius: 50%;
+  color: #402514;
+  background: #ffe5b4;
+  font-size: clamp(9px, 1.1cqw, 18px);
+  transition: transform 180ms ease;
+}
+
+.meet-bolt-story-button:hover .meet-bolt-play {
+  transform: scale(1.12);
+}
+
+.meet-bolt-story-note {
+  position: absolute;
+  z-index: 5;
+  top: 40.8%;
+  right: 2.2%;
+  width: 8.5%;
+  padding: 1% 0.8%;
+  border: 1px solid #b78045;
+  color: #3b2415;
+  background: #f9dfaf;
+  box-shadow: 3px 5px 0 rgba(30, 13, 3, 0.34);
+  font-size: clamp(7px, 0.9cqw, 14px);
+  font-weight: 800;
+  line-height: 1.45;
+  transform: rotate(5deg);
+}
+
+.meet-bolt-story-note b {
+  display: block;
+  color: var(--bolt-red);
+  font-size: 1.6em;
+  text-align: right;
+}
+
+.meet-bolt-traits {
+  position: absolute;
+  z-index: 4;
+  left: 14.3%;
+  right: 20.5%;
+  bottom: 4.4%;
+  height: 24.2%;
+  padding: 1.05% 1.1% 1%;
+  border: 2px solid #9e6b3d;
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(0deg, rgba(127, 76, 38, 0.06) 0 1px, transparent 1px 8px),
+    #f3d7a6;
+  box-shadow: 0 5px 0 rgba(30, 13, 4, 0.35), inset 0 0 0 3px rgba(255, 238, 199, 0.5);
+}
+
+.meet-bolt-traits h2 {
+  position: absolute;
+  top: -8%;
+  left: 1%;
+  max-width: 56%;
+  margin: 0;
+  padding: 0.45% 1.1%;
+  border: 1px solid #9b6332;
+  color: #29190f;
+  background: #f9e3b8;
+  box-shadow: 2px 3px 0 rgba(42, 20, 7, 0.25);
+  font-family: "DM Mono", monospace;
+  font-size: clamp(9px, 1.35cqw, 21px);
+  font-weight: 500;
+  transform: rotate(-1deg);
+}
+
+.meet-bolt-traits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.1%;
+  height: 100%;
+  padding-top: 2.5%;
+}
+
+.meet-bolt-trait {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 8% 7% 5%;
+  border: 1px solid #c49a65;
+  border-radius: 5px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 249, 218, 0.9), transparent 35%),
+    rgba(255, 235, 194, 0.77);
+  box-shadow: inset 0 0 0 2px rgba(255, 247, 219, 0.4);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.meet-bolt-trait:hover {
+  z-index: 2;
+  transform: translateY(-3px) rotate(-0.5deg);
+  box-shadow: 0 5px 9px rgba(83, 43, 14, 0.2);
+}
+
+.meet-bolt-trait-icon {
+  float: left;
+  margin: 0 7% 3% 0;
+  color: #c52d3a;
+  font-size: clamp(13px, 2.1cqw, 32px);
+  line-height: 1;
+}
+
+.meet-bolt-trait:nth-child(2) .meet-bolt-trait-icon { color: #5b5686; }
+.meet-bolt-trait:nth-child(3) .meet-bolt-trait-icon { color: #d69a21; }
+.meet-bolt-trait:nth-child(4) .meet-bolt-trait-icon { color: #50813a; }
+
+.meet-bolt-trait h3 {
+  margin: 0 0 7%;
+  font-size: clamp(7px, 0.95cqw, 15px);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.meet-bolt-trait p {
+  clear: both;
+  margin: 0;
+  font-size: clamp(7px, 0.91cqw, 14px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.meet-bolt-doodle {
+  position: absolute;
+  right: 5%;
+  bottom: 3%;
+  color: rgba(93, 58, 29, 0.65);
+  font-size: clamp(9px, 1.4cqw, 22px);
+}
+
+.meet-bolt-portrait-card {
+  position: absolute;
+  z-index: 5;
+  right: 21.3%;
+  bottom: 7.2%;
+  width: 12.2%;
+  height: 19.2%;
+  padding: 0.6%;
+  border: 2px solid #a46b3c;
+  background: #f6d8a3;
+  box-shadow: 4px 5px 0 rgba(31, 13, 3, 0.4);
+  transform: rotate(5deg);
+}
+
+.meet-bolt-portrait-frame {
+  height: 74%;
+  overflow: hidden;
+  border: 4px solid #fce9c4;
+  background:
+    radial-gradient(circle at 70% 20%, #ffc66b 0 2px, transparent 3px),
+    linear-gradient(145deg, #25313a, #8c4b25);
+}
+
+.meet-bolt-portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 3px 3px rgba(20, 9, 2, 0.35));
+}
+
+.meet-bolt-portrait-card p {
+  margin: 2% 0 0;
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(8px, 1.2cqw, 18px);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.meet-bolt-portrait-card p span { color: #a6212b; }
+
+.meet-bolt-activities {
+  position: absolute;
+  z-index: 5;
+  right: 2.7%;
+  bottom: 5%;
+  width: 17.3%;
+  min-height: 22%;
+  padding: 1.1% 1.2%;
+  border: 1px solid #b27c45;
+  color: #382214;
+  background:
+    repeating-linear-gradient(0deg, rgba(119, 71, 32, 0.065) 0 1px, transparent 1px 8px),
+    #f6dba9;
+  box-shadow: 4px 6px 0 rgba(29, 12, 3, 0.35);
+  transform: rotate(-7deg);
+}
+
+.meet-bolt-activities h2 {
+  margin: 0 0 6%;
+  font-family: "DM Mono", monospace;
+  font-size: clamp(8px, 1.15cqw, 18px);
+  font-weight: 500;
+}
+
+.meet-bolt-activities ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35cqw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meet-bolt-activities label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5cqw;
+  font-size: clamp(6px, 0.85cqw, 13px);
+  font-weight: 700;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.meet-bolt-activities input {
+  flex: 0 0 auto;
+  width: 1.1cqw;
+  min-width: 9px;
+  height: 1.1cqw;
+  min-height: 9px;
+  margin: 0.1em 0 0;
+  accent-color: #d83240;
+  cursor: pointer;
+}
+
+.meet-bolt-activities input:checked + span {
+  text-decoration: none;
+}
+
+.meet-bolt-activity-heart {
+  display: block;
+  margin-top: 4%;
+  color: #c52b39;
+  font-size: clamp(13px, 2cqw, 30px);
+  text-align: center;
+}
+
+.meet-bolt-bottom-note {
+  position: absolute;
+  z-index: 4;
+  left: 2.5%;
+  bottom: 7%;
+  width: 12.8%;
+  padding: 1.2%;
+  border: 1px solid #b47b41;
+  color: #422719;
+  background: #f7d9a2;
+  box-shadow: 3px 4px 0 rgba(29, 12, 3, 0.35);
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(8px, 1.15cqw, 18px);
+  line-height: 1.45;
+  transform: rotate(-8deg);
+}
+
+.meet-bolt-bottom-note span {
+  display: block;
+  color: #c52b39;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+.meet-bolt-scene-effects {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.meet-bolt-spark {
+  position: absolute;
+  color: #ffcf77;
+  font-size: clamp(12px, 2cqw, 31px);
+  text-shadow: 0 0 8px rgba(255, 176, 68, 0.9);
+  animation: meet-bolt-twinkle 2.8s ease-in-out infinite;
+}
+
+.meet-bolt-spark-1 { top: 22%; left: 43%; animation-delay: -0.2s; }
+.meet-bolt-spark-2 { top: 31%; left: 62%; animation-delay: -1.2s; }
+.meet-bolt-spark-3 { top: 51%; left: 37%; animation-delay: -0.7s; }
+.meet-bolt-spark-4 { top: 14%; left: 72%; animation-delay: -1.7s; }
+.meet-bolt-spark-5 { top: 61%; left: 65%; animation-delay: -0.9s; }
+
+.meet-bolt-dust {
+  position: absolute;
+  width: 0.35cqw;
+  min-width: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ffd78c;
+  box-shadow: 0 0 8px 2px rgba(255, 177, 66, 0.65);
+  animation: meet-bolt-float 5.5s ease-in-out infinite;
+}
+
+.meet-bolt-dust-1 { left: 31%; top: 18%; }
+.meet-bolt-dust-2 { left: 66%; top: 17%; animation-delay: -2s; }
+.meet-bolt-dust-3 { left: 58%; top: 62%; animation-delay: -3.3s; }
+.meet-bolt-dust-4 { left: 25%; top: 60%; animation-delay: -1.2s; }
+
+.meet-bolt-live-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.meet-bolt-modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  padding: 24px;
+  background: rgba(19, 9, 4, 0.78);
+  backdrop-filter: blur(7px);
+  animation: meet-bolt-fade-in 180ms ease both;
+}
+
+.meet-bolt-modal {
+  position: relative;
+  width: min(100%, 560px);
+  max-height: min(90vh, 850px);
+  overflow-y: auto;
+  padding: clamp(22px, 4vw, 42px);
+  border: 2px solid #9b622f;
+  border-radius: 8px;
+  color: #352012;
+  background:
+    repeating-linear-gradient(0deg, rgba(119, 71, 32, 0.05) 0 1px, transparent 1px 9px),
+    #f8e0b2;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5), inset 0 0 0 5px rgba(255, 242, 211, 0.55);
+  animation: meet-bolt-modal-pop 260ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.meet-bolt-modal-close {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #6d3a1e;
+  border-radius: 50%;
+  color: #3a2113;
+  background: #f2ce92;
+  cursor: pointer;
+  font-size: 28px !important;
+  line-height: 1;
+}
+
+.meet-bolt-modal-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 190px;
+  margin: 0 0 20px;
+  overflow: hidden;
+  border: 2px solid #70401f;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255, 199, 106, 0.6) 0 2px, transparent 4px),
+    radial-gradient(circle at 78% 34%, rgba(255, 199, 106, 0.7) 0 2px, transparent 4px),
+    linear-gradient(145deg, #29343b, #87502c 70%, #422416);
+}
+
+.meet-bolt-modal-art img {
+  height: 100%;
+  max-width: 70%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.4));
+  animation: meet-bolt-modal-float 3s ease-in-out infinite;
+}
+
+.meet-bolt-modal-art > span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #ffdb91;
+  letter-spacing: 0.7em;
+}
+
+.meet-bolt-modal-kicker {
+  margin: 0 0 8px !important;
+  color: #9a382a;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.meet-bolt-modal h2 {
+  margin: 0 0 16px;
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(27px, 5vw, 38px);
+  line-height: 1.15;
+}
+
+.meet-bolt-modal p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.meet-bolt-modal p span { color: #c52b39; }
+
+.meet-bolt-modal-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 20px;
+  border: 2px solid #6e341d;
+  border-radius: 5px;
+  padding: 13px 18px;
+  color: #fff0d0;
+  background: #792a24;
+  box-shadow: 0 4px 0 #4b2018;
+  cursor: pointer;
+  font-weight: 900 !important;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.meet-bolt-modal-cta:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #4b2018;
+}
+
+@keyframes meet-bolt-idle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(0.6deg); }
+}
+
+@keyframes meet-bolt-wave {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-7px) rotate(-3deg); }
+  50% { transform: translateY(-2px) rotate(2.5deg); }
+  75% { transform: translateY(-6px) rotate(-1.5deg); }
+}
+
+@keyframes meet-bolt-halo {
+  0%, 100% { opacity: 0.45; transform: scale(0.9); }
+  50% { opacity: 0.9; transform: scale(1.1); }
+}
+
+@keyframes meet-bolt-twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.8) rotate(-8deg); }
+  50% { opacity: 1; transform: scale(1.15) rotate(8deg); }
+}
+
+@keyframes meet-bolt-float {
+  0%, 100% { opacity: 0.2; transform: translate3d(0, 0, 0); }
+  50% { opacity: 0.95; transform: translate3d(4px, -13px, 0); }
+}
+
+@keyframes meet-bolt-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes meet-bolt-modal-pop {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes meet-bolt-modal-float {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-5px) rotate(1deg); }
+}
+
+/* The artwork stays at its original 3:2 ratio. On smaller screens it scales
+   as one complete canvas, so hotspots and artwork never drift out of alignment. */
+@media (max-width: 900px) {
+  .meet-bolt-topbar { min-height: 22px; }
+  .meet-bolt-sidebar { min-width: 40px; }
+  .meet-bolt-side-link b { font-size: clamp(5px, 0.86cqw, 11px); }
+  .meet-bolt-title-card h1 { font-size: clamp(22px, 5.1cqw, 46px); }
+  .meet-bolt-note { font-size: clamp(7px, 1.15cqw, 11px); }
+  .meet-bolt-trait p { font-size: clamp(6px, 0.91cqw, 10px); }
+}
+
+@media (max-width: 600px) {
+  .meet-bolt-page {
+    min-height: auto;
+    overflow-x: hidden;
+  }
+
+  .meet-bolt-artboard {
+    width: 100%;
+    min-width: 320px;
+    aspect-ratio: 3 / 2;
+  }
+
+  .meet-bolt-topbar {
+    min-height: 17px;
+    padding-inline: 1.5%;
+    gap: 1%;
+  }
+
+  .meet-bolt-brand {
+    min-width: 23%;
+    gap: 0.5cqw;
+  }
+
+  .meet-bolt-brand-mark {
+    min-width: 15px;
+    font-size: clamp(7px, 1.2cqw, 11px);
+  }
+
+  .meet-bolt-brand,
+  .meet-bolt-topnav button {
+    font-size: clamp(5px, 0.95cqw, 7px);
+  }
+
+  .meet-bolt-topnav { gap: 0.55cqw; }
+  .meet-bolt-topnav i { font-size: 5px; }
+  .meet-bolt-window-controls { gap: 1px; }
+  .meet-bolt-window-controls span {
+    min-width: 9px;
+    min-height: 9px;
+    border-width: 1px;
+    font-size: 7px;
+  }
+
+  .meet-bolt-sidebar {
+    min-width: 30px;
+    padding: 0.35%;
+    border-width: 1px;
+    gap: 0.4%;
+  }
+
+  .meet-bolt-side-link span { font-size: clamp(8px, 1.7cqw, 11px); }
+  .meet-bolt-side-link b { font-size: clamp(4px, 0.86cqw, 6px); }
+
+  .meet-bolt-sound {
+    gap: 0.4cqw;
+    border-width: 1px;
+    padding: 0.35cqw 0.5cqw;
+    font-size: clamp(5px, 1cqw, 7px);
+  }
+
+  .meet-bolt-toggle {
+    min-width: 18px;
+    min-height: 9px;
+    padding: 1px;
+  }
+
+  .meet-bolt-toggle span { min-width: 6px; }
+  .meet-bolt-toggle.is-on span { transform: translateX(1.45cqw); }
+
+  .meet-bolt-title-card {
+    border-width: 1px;
+    box-shadow: 2px 3px 0 rgba(35, 16, 5, 0.38), inset 0 0 0 1px rgba(255, 240, 204, 0.55);
+  }
+
+  .meet-bolt-eyebrow { font-size: clamp(4px, 0.66cqw, 6px); }
+  .meet-bolt-title-card h1 { font-size: clamp(18px, 5.1cqw, 31px); }
+  .meet-bolt-title-card p { font-size: clamp(5px, 1.02cqw, 7px); }
+
+  .meet-bolt-note {
+    border-width: 1px;
+    box-shadow: 2px 3px 0 rgba(34, 16, 6, 0.32);
+    font-size: clamp(5px, 1.15cqw, 7px);
+  }
+
+  .meet-bolt-character-image { filter: drop-shadow(0 3px 3px rgba(26, 12, 4, 0.4)); }
+  .meet-bolt-greeting { font-size: clamp(5px, 0.85cqw, 7px); }
+
+  .meet-bolt-story-button {
+    border-width: 2px;
+    box-shadow: 0 0 0 1px #a66b35, 2px 3px 0 rgba(22, 9, 2, 0.45);
+  }
+
+  .meet-bolt-story-button strong { font-size: clamp(6px, 1.65cqw, 10px); }
+  .meet-bolt-play { min-width: 12px; font-size: 6px; }
+  .meet-bolt-story-note { font-size: clamp(4px, 0.9cqw, 6px); }
+
+  .meet-bolt-traits {
+    border-width: 1px;
+    box-shadow: 0 2px 0 rgba(30, 13, 4, 0.35), inset 0 0 0 1px rgba(255, 238, 199, 0.5);
+  }
+
+  .meet-bolt-traits h2 { font-size: clamp(6px, 1.35cqw, 9px); }
+  .meet-bolt-trait { border-radius: 2px; padding: 7% 5% 4%; }
+  .meet-bolt-trait h3 { font-size: clamp(5px, 0.95cqw, 7px); }
+  .meet-bolt-trait p { font-size: clamp(4px, 0.91cqw, 6px); }
+  .meet-bolt-trait-icon { font-size: clamp(8px, 2.1cqw, 13px); }
+  .meet-bolt-doodle { font-size: clamp(6px, 1.4cqw, 9px); }
+
+  .meet-bolt-portrait-card {
+    border-width: 1px;
+    box-shadow: 2px 3px 0 rgba(31, 13, 3, 0.4);
+  }
+
+  .meet-bolt-portrait-frame { border-width: 2px; }
+  .meet-bolt-portrait-card p { font-size: clamp(5px, 1.2cqw, 8px); }
+  .meet-bolt-activities { border-width: 1px; box-shadow: 2px 3px 0 rgba(29, 12, 3, 0.35); }
+  .meet-bolt-activities h2 { font-size: clamp(5px, 1.15cqw, 7px); }
+  .meet-bolt-activities label { font-size: clamp(4px, 0.85cqw, 6px); }
+  .meet-bolt-activities input { min-width: 6px; min-height: 6px; }
+  .meet-bolt-bottom-note { font-size: clamp(5px, 1.15cqw, 7px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meet-bolt-artboard *,
+  .meet-bolt-modal *,
+  .meet-bolt-modal-backdrop {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
