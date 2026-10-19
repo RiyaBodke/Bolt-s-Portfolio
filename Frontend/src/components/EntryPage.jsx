@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import TopBar from "./TopBar";
+import TopBar from "./Topbar";
 import StickyNote from "./StickyNote";
 import VisitorCounter from "./VisitorCounter";
 import "./EntryPage.css";
