@@ -8,7 +8,7 @@
 A 1990s toy repair shop you can walk into.
 Built for **haX Baby's First Website** · Track 2, an original character
 
-**[Step inside →](https://bolt-s-portfolio.vercel.app)** &nbsp;·&nbsp; [Watch the tour]([[https://canva.link/fvn2oagot0fdeln]])
+**[Step inside →](https://bolt-s-portfolio.vercel.app)** &nbsp;·&nbsp; [Watch the tour](https://canva.link/fvn2oagot0fdeln)
 
 </div>
 
