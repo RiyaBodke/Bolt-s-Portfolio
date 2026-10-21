@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Frontend/public/bolt/bolt-happy.webp" width="190" alt="Bolt, a baby robot with a vintage-TV head, smiling">
+<img width="508" height="491" alt="Bolt, a baby robot with a vintage-TV head, smiling" src="https://github.com/user-attachments/assets/2aa3df43-1a61-4fa2-a1a6-4a9a59e03562" />
 
 # Bolt's Fix-It-All
 ### Good toys, brighter tomorrow.
@@ -28,12 +28,14 @@ looked inside them. That's how I learned how everything works.
 
 Now I run the shop. **They fixed me, so I fix everyone else.**
 
+
+
 <table align="center">
   <tr>
-    <td align="center"><img src="Frontend/public/bolt/bolt-surprised.webp" width="110" alt="Bolt surprised"><br><sub>a customer!</sub></td>
-    <td align="center"><img src="Frontend/public/bolt/bolt-confused.webp" width="110" alt="Bolt confused"><br><sub>diagnosing</sub></td>
-    <td align="center"><img src="Frontend/public/bolt/bolt-gigglish.webp" width="110" alt="Bolt giggling"><br><sub>"stop, that tickles"</sub></td>
-    <td align="center"><img src="Frontend/public/bolt/bolt-sleepy.webp" width="110" alt="Bolt sleepy"><br><sub>resting his eyes</sub></td>
+    <td align="center"><img width="1214" height="1295" alt="Bolt surprised" src="https://github.com/user-attachments/assets/97f54287-c87d-4834-9263-3b70c6b4b7d9" /><br><sub>a customer!</sub></td>
+    <td align="center"><img width="1223" height="1286" alt="Bolt confused" src="https://github.com/user-attachments/assets/8da81b4d-71e9-48d4-a485-07a9505bf14a" /><br><sub>diagnosing</sub></td> 
+    <td align="center"><img width="1276" height="1233" alt="Bolt giggling" src="https://github.com/user-attachments/assets/2cc9d358-5b60-4d39-be64-169eb6373034" /><br><sub>"stop, that tickles"</sub></td>
+    <td align="center"><img width="1233" height="1276" alt="Bolt sleepy" src="https://github.com/user-attachments/assets/0633878f-d53e-4b81-b538-57c8c0c2e0da" /><br><sub>resting his eyes</sub></td>
   </tr>
 </table>
 
