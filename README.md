@@ -8,11 +8,11 @@
 A 1990s toy repair shop you can walk into.
 Built for **haX Baby's First Website** · Track 2, an original character
 
-**[Step inside →](https://YOUR-SITE.vercel.app)** &nbsp;·&nbsp; [Watch the tour](https://YOUR-VIDEO-LINK)
+**[Step inside →](https://bolt-s-portfolio.vercel.app)** &nbsp;·&nbsp; [Watch the tour](https://YOUR-VIDEO-LINK)
 
 </div>
 
-<!-- Add a screenshot or GIF here:  ![The storefront](Images/screenshot-storefront.png) -->
+<img width="1536" height="1024" alt="Bolt's Toy Shop Front Door" src="https://github.com/user-attachments/assets/ac85d631-77f3-4890-9904-b1349fe4a0fd" />
 
 ---
 
