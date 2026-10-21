@@ -1,0 +1,33 @@
+# Creative content notice
+
+**Copyright (c) 2026 Riya Bodke. All rights reserved.**
+
+This notice covers the creative content of *Bolt's Fix-It-All*, which is NOT covered by the MIT
+license in the `LICENSE` file:
+
+- The character **Bolt** (his design concept, name, personality, voice and catchphrases)
+- **Bolt's story and world:** the backstory, the shop, the repair cases, the tool descriptions,
+  the dialogue and all other written content (including the text in `Frontend/src/shopData.js`)
+- The **artwork and images** in `Frontend/public/` and `Images/`, to the extent I hold rights in them
+  (see the note on AI-generated art below)
+
+You may view this repository and run it for personal, non-commercial evaluation (for example, to judge
+the hackathon, or to review it as part of a job application). You may not copy, redistribute, adapt,
+sell or use the character, the story, the written content or the artwork in your own projects without my
+written permission.
+
+## Note on AI-generated art
+
+The images of Bolt and the shop scenes were generated with **[NAME THE AI TOOL]** from my own
+character design, prompts and direction, and were then edited by me. Rights in AI-generated images
+depend on the tool's terms and on local law, so I claim rights only to the extent they exist.
+The character concept, the story and the written content are my original work.
+
+## Third-party material
+
+Fonts (Fraunces, Fredoka, Caveat) are used under the SIL Open Font License through Google Fonts and
+remain the property of their authors.
+
+## Contact
+
+For permission requests, contact: [YOUR EMAIL]
