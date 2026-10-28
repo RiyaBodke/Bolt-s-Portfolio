@@ -103,7 +103,7 @@ story doesn't touch the layout.
 
 **Project:** Bolt's Fix-It-All
 
-**Date:** October 2026
+**Date:** 17th October 2026 - 19th October 2026
 
 **Recognition:** Certificate of Participation
 
