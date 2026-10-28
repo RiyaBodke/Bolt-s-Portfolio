@@ -98,6 +98,15 @@ story doesn't touch the layout.
 
 Everything here was made during the hackathon, 17 to 19 October 2026.
 
+## Hackathon Participation
+
+**Event:** haX.baby — Baby's First Website
+**Project:** Bolt's Fix-It-All
+**Date:** October 2026
+**Recognition:** Certificate of Participation
+
+[View Participation Certificate](docs/hackathon/participation-certificate.png)
+
 ---
 
 <div align="center">
