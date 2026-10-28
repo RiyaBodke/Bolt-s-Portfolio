@@ -95,7 +95,6 @@ story doesn't touch the layout.
 - 💻 **Code:** written with help from Claude (Anthropic), then tested and edited by me.
 - 🔍 **There is one hidden Easter egg.** I won't say where.
 - 📱 Built mobile-first, keyboard friendly, and it respects reduced-motion settings.
-- 
 
 ## Hackathon Participation
 
