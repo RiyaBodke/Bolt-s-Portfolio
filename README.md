@@ -91,7 +91,7 @@ story doesn't touch the layout.
 ## Good to know
 
 - 🧸 **The guestbook is a local demo.** Notes stay in your own browser and are never sent anywhere, and the page says so.
-- 🎨 **Art:** Bolt and the shop scenes were generated with **[NAME THE AI TOOL]**, then cropped, cut out and optimised by me.
+- 🎨 **Art:** Bolt and the shop scenes were generated with **ChatGPT & Gemini**, then cropped, cut out and optimised by me.
 - 💻 **Code:** written with help from Claude (Anthropic), then tested and edited by me.
 - 🔍 **There is one hidden Easter egg.** I won't say where.
 - 📱 Built mobile-first, keyboard friendly, and it respects reduced-motion settings.
